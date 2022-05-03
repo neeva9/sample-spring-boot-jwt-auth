@@ -1,15 +1,10 @@
-# Demo for Shopping Cart
+# Demo for JWT Authentication
 
 #### Prerequisite:
 ````
 Java 8
 IntelliJ IDEA
 Gradle
-````
-
-#### Database:
-````
-H2 embedded connection
 ````
 
 #### Build:
@@ -25,4 +20,10 @@ gradle bootRun
 #### Swagger:
 ````
 http://localhost:8080/swagger-ui/index.html#/ 
+````
+
+#### How to:
+````
+- Use /authenticate api to generate the JWT token
+- To test JWT token run the /hello GET api to check is Hello Authenticated User is displayed or it return 401-Unauthorized
 ````

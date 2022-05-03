@@ -9,18 +9,24 @@ group = 'com.demo'
 version = '1.0.0'
 sourceCompatibility = '1.8'
 
+ext {
+    set('springCloudVersion', "Hoxton.SR9")
+}
+
 
 repositories {
     mavenCentral()
 }
 
+
+test {
+    useJUnitPlatform()
+}
+
 dependencies {
     compile 'io.springfox:springfox-boot-starter:3.0.0'
     compile 'org.springframework.boot:spring-boot-starter-web'
-    compile 'org.springframework.boot:spring-boot-starter-data-jpa'
-    compile 'org.springframework.boot:spring-boot-starter-jdbc'
-    compile 'com.h2database:h2'
-    compileOnly 'org.projectlombok:lombok:1.18.18'
+    compile 'org.springframework.boot:spring-boot-starter-security'
+    compile 'io.jsonwebtoken:jjwt:0.9.1'
     testCompile 'org.springframework.boot:spring-boot-starter-test'
-    annotationProcessor 'org.projectlombok:lombok:1.18.18'
 }

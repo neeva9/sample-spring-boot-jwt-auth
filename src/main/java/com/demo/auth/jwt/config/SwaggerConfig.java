@@ -1,4 +1,4 @@
-package com.demo.shoppingcart.config;
+package com.demo.auth.jwt.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -18,7 +18,7 @@ public class SwaggerConfig {
     public Docket api() {
         return new Docket(DocumentationType.SWAGGER_2)
                 .select()
-                .apis(RequestHandlerSelectors.basePackage("com.demo.shoppingcart"))
+                .apis(RequestHandlerSelectors.basePackage("com.demo.auth.jwt"))
                 .paths(PathSelectors.any())
                 .build()
                 .apiInfo(metaData());
@@ -26,8 +26,8 @@ public class SwaggerConfig {
 
     private ApiInfo metaData() {
         ApiInfo apiInfo = new ApiInfo(
-                "Shopping Cart REST API",
-                "Spring Boot REST API for Shopping Cart",
+                "JWT Auth REST API",
+                "Spring Boot REST API for JWT Authentication",
                 "1.0",
                 "",
                 null,
